@@ -17,13 +17,17 @@ function judge (input) {
   input.map(item => {
     map[item % 13] = 1
   })
+  console.log('map: ', map);
   let count = 0;
   for (let i = 0; i < map.length; i++) {
+    console.log('map[i]: ', map[i]);
     if (map[i] === 1) count++
-    else count--
-    if (count >= 5)return true
-    return false
+    else count = 0
+    if (count >= 5) return true
   }
+  return false
 }
 
-console.log(judge([18,11,48,43,42,0,5,4,6,18]))
+console.log(judge([1, 44, 22, 2, 3, 4, 5]))
+
+
