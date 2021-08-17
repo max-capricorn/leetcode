@@ -17,10 +17,8 @@ function judge (input) {
   input.map(item => {
     map[item % 13] = 1
   })
-  console.log('map: ', map);
   let count = 0;
   for (let i = 0; i < map.length; i++) {
-    console.log('map[i]: ', map[i]);
     if (map[i] === 1) count++
     else count = 0
     if (count >= 5) return true
